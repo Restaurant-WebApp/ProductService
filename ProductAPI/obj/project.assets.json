@@ -318,11 +318,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Fontys\\Individual-Project\\ProductAPI\\ProductAPI.csproj",
+      "projectUniqueName": "D:\\Fontys\\Individual-Project\\ProductService\\ProductAPI\\ProductAPI.csproj",
       "projectName": "ProductAPI",
-      "projectPath": "D:\\Fontys\\Individual-Project\\ProductAPI\\ProductAPI.csproj",
+      "projectPath": "D:\\Fontys\\Individual-Project\\ProductService\\ProductAPI\\ProductAPI.csproj",
       "packagesPath": "C:\\Users\\Nares\\.nuget\\packages\\",
-      "outputPath": "D:\\Fontys\\Individual-Project\\ProductAPI\\obj\\",
+      "outputPath": "D:\\Fontys\\Individual-Project\\ProductService\\ProductAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nares\\AppData\\Roaming\\NuGet\\NuGet.Config",
