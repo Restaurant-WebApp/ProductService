@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using ProductAPI.Model;
+using ProductAPI.Repository;
 
 namespace ProductAPI.Controllers
 {
@@ -9,30 +10,37 @@ namespace ProductAPI.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private static List<Product> products = new List<Product>
+        private ResponseDto _response;
+        private IProductRepo _productRepo;
+
+        public ProductController(IProductRepo productRepo)
         {
-               new Product{ ProductID = 0, ProductName = "Chicken Curry", ProductDescription = "Delicious chicken curry", ProductCategory = "Mains", ProductImage = "image1" },
-               new Product{ ProductID = 1, ProductName = "Momos", ProductDescription = "Delicious momo", ProductCategory = "Starter", ProductImage = "image2" },
-               new Product{ ProductID = 2, ProductName = "Biryani", ProductDescription = "Delicious Biryani", ProductCategory = "Mains", ProductImage = "image3" }
-        };
+            _productRepo = productRepo;
+            this._response = new ResponseDto();
+        }
+        
 
         [HttpGet]
         [Route ("/products")]
-        [ProducesResponseType (typeof (Product), 200)]
-        [ProducesResponseType (400)]
-        public IActionResult GetProducts()
+        public async Task<object> GetProducts()
         {
-            if (products == null) {
-                return NotFound();
+            try
+            {
+                IEnumerable<ProductDto> productDtos = await _productRepo.GetProducts();
+                _response.Result = productDtos;
+            }catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { ex.ToString()};
             }
-            return Ok(products);
+            return _response;
         }
 
-        [HttpGet]
+        /*[HttpGet]
         [Route ("/id")]
         public ActionResult<Product> GetProductById(int id)
         {
-            var product = products.Find(product => product.ProductID == id);
+            var product = products.Find(product => product.ProductId == id);
             if (product != null) { return Ok(product); }
             return BadRequest();
         }
@@ -43,6 +51,6 @@ namespace ProductAPI.Controllers
             if (product == null) { return BadRequest(); }
             products.Add(product);
             return Ok(products);
-        }
+        }*/
     }
 }
