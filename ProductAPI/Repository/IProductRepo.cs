@@ -6,7 +6,7 @@ namespace ProductAPI.Repository
     public interface IProductRepo
     {
         Task<IEnumerable<ProductDto>> GetProducts();
-        Task<ProductDto> ProductById(int productId);
+        Task<ProductDto> GetProductById(int productId);
         Task<ProductDto> CreateUpdateProduct(ProductDto productDto);
         Task<bool> DeleteProduct(int productId);
 

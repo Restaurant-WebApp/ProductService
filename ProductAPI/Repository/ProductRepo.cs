@@ -59,7 +59,7 @@ namespace ProductAPI.Repository
 
         }
 
-        public async Task<ProductDto> ProductById(int productId)
+        public async Task<ProductDto> GetProductById(int productId)
         {
             Product product = await _context.Products.Where(p => p.ProductId == productId).FirstOrDefaultAsync();
             return _mapper.Map<ProductDto>(product);
