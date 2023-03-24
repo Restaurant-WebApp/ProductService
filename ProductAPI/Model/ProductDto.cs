@@ -6,8 +6,9 @@ namespace ProductAPI.Model
     {
         public int ProductId { get; set; }
         public string ProductName { get; set; }
+        public int Price { get; set; }
         public string ProductDescription { get; set; }
-        public string ProductCategory { get; set; }
+        public Category ProductCategory { get; set; }
         public string ProductImageUrl { get; set; }
     }
 }
