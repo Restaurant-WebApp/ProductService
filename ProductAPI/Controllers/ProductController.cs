@@ -12,8 +12,8 @@ namespace ProductAPI.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private ResponseDto _response;
-        private IProductRepo _productRepo;
+        private readonly ResponseDto _response;
+        private readonly IProductRepo _productRepo;
 
         public ProductController(IProductRepo productRepo)
         {
