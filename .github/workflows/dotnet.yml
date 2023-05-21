@@ -27,9 +27,8 @@ jobs:
       run: dotnet build ProductAPI --no-restore
     - name: Test
       run: dotnet test ProductAPI --no-build --verbosity normal
-    -name: Build and Push Docker Image
+    - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v6
-      name: Build & push Docker image
       with:
           image: raison1311/restaurant-microservices
           tags: v1, latest
