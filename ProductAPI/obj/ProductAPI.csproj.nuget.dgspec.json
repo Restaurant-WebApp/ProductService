@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Fontys\\Individual-Project\\ProductService\\ProductAPI\\ProductAPI.csproj": {}
+    "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI\\ProductAPI.csproj": {}
   },
   "projects": {
-    "D:\\Fontys\\Individual-Project\\ProductService\\ProductAPI\\ProductAPI.csproj": {
+    "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI\\ProductAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Fontys\\Individual-Project\\ProductService\\ProductAPI\\ProductAPI.csproj",
+        "projectUniqueName": "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI\\ProductAPI.csproj",
         "projectName": "ProductAPI",
-        "projectPath": "D:\\Fontys\\Individual-Project\\ProductService\\ProductAPI\\ProductAPI.csproj",
+        "projectPath": "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI\\ProductAPI.csproj",
         "packagesPath": "C:\\Users\\Nares\\.nuget\\packages\\",
-        "outputPath": "D:\\Fontys\\Individual-Project\\ProductService\\ProductAPI\\obj\\",
+        "outputPath": "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nares\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -37,8 +37,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

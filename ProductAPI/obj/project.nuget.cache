@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xIDOUSEsTQ/vO+0M1CY2+eHVOsNJEjeJo2Xbg7GaBCF/o9pVmlixWVHElC/K6JM5v1F7O7gNBpgD995CP9/aHA==",
+  "dgSpecHash": "ULpFlN0eiAuUXUhKyZfjyR2/PRw5t1icOkjmeGxlQoBRk+vTU9IV61TT8IafRcqzPFdoGWdfQcd2kBr1IVX+SQ==",
   "success": true,
-  "projectFilePath": "D:\\Fontys\\Individual-Project\\ProductService\\ProductAPI\\ProductAPI.csproj",
+  "projectFilePath": "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI\\ProductAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nares\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Nares\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
@@ -68,7 +68,6 @@
     "C:\\Users\\Nares\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
     "C:\\Users\\Nares\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\Nares\\.nuget\\packages\\system.runtime.caching\\5.0.0\\system.runtime.caching.5.0.0.nupkg.sha512",
-    "C:\\Users\\Nares\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Nares\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\Nares\\.nuget\\packages\\system.security.cryptography.cng\\5.0.0\\system.security.cryptography.cng.5.0.0.nupkg.sha512",
     "C:\\Users\\Nares\\.nuget\\packages\\system.security.cryptography.protecteddata\\5.0.0\\system.security.cryptography.protecteddata.5.0.0.nupkg.sha512",
