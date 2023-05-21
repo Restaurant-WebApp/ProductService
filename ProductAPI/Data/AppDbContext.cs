@@ -22,7 +22,7 @@ namespace ProductAPI.Data
                     ProductDescription="Delicious chicken curry",
                     ProductCategory= Category.Mains,
                     Price=17,
-                    ProductImageUrl=""
+                    ProductImageUrl= "https://iili.io/VNm787.jpg"
 
                 });
             modelBuilder.Entity<Product>().HasData(
@@ -33,7 +33,7 @@ namespace ProductAPI.Data
                     ProductDescription = "Nepalese steamed dumplings",
                     ProductCategory = Category.Starter,
                     Price = 10,
-                    ProductImageUrl = ""
+                    ProductImageUrl = "https://iili.io/VNma99.jpg"
 
                 });
             modelBuilder.Entity<Product>().HasData(
@@ -44,7 +44,7 @@ namespace ProductAPI.Data
                     ProductDescription = "Delicious chicken leg piece cooked in fire",
                     ProductCategory = Category.Mains,
                     Price = 15,
-                    ProductImageUrl = ""
+                    ProductImageUrl = "https://iili.io/VNmcue.jpg"
 
                 });
             modelBuilder.Entity<Product>().HasData(
@@ -55,7 +55,7 @@ namespace ProductAPI.Data
                     ProductDescription = "Delicious sugar balls",
                     ProductCategory = Category.Mains,
                     Price = 5,
-                    ProductImageUrl = ""
+                    ProductImageUrl = "https://iili.io/VNmlwu.jpg"
 
                 });
         }
