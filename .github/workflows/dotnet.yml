@@ -32,7 +32,6 @@ jobs:
       with:
           image: raison1311/restaurant-microservices
           tags: v1, latest
-          registry: registry-url.io
-          dockerfile: Dockerfile.ci
+          registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
