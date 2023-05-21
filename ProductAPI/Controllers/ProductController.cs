@@ -105,21 +105,6 @@ namespace ProductAPI.Controllers
             return _response;
 
         }
-        /*[HttpGet]
-        [Route ("/id")]
-        public ActionResult<Product> GetProductById(int id)
-        {
-            var product = products.Find(product => product.ProductId == id);
-            if (product != null) { return Ok(product); }
-            return BadRequest();
-        }
-
-        [HttpPost]
-        public async Task<ActionResult<Product>> AddProduct(Product product)
-        {
-            if (product == null) { return BadRequest(); }
-            products.Add(product);
-            return Ok(products);
-        }*/
+       
     }
 }
