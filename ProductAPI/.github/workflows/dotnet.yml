@@ -9,6 +9,7 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
+
   build:
     name: Build and analyze
     runs-on: windows-latest
@@ -47,6 +48,6 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"Restaurant-WebApp_ProductService" /o:"restaurant-webapp" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-            dotnet build ProductAPI --no-restore
+            dotnet build <ProductAPI/ProductAPI.csproj.user>
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
    
