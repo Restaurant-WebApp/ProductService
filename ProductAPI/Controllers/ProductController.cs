@@ -20,27 +20,28 @@ namespace ProductAPI.Controllers
             _productRepo = productRepo;
             this._response = new ResponseDto();
         }
-        
+
 
         [HttpGet]
-        [Route ("/products")]
-        public async Task<object> GetProducts()
+        [Route("/products")]
+        public async Task<IActionResult> GetProducts()
         {
             try
             {
                 IEnumerable<ProductDto> productDtos = await _productRepo.GetProducts();
                 _response.Result = productDtos;
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessages = new List<string>() { ex.ToString()};
+                _response.ErrorMessages = new List<string>() { ex.ToString() };
             }
-            return _response;
+            return Ok(_response);
         }
 
         [HttpGet]
         [Route("{id}")]
-        public async Task<object> GetProductById(int id)
+        public async Task<IActionResult> GetProductById(int id)
         {
             try
             {
@@ -52,11 +53,11 @@ namespace ProductAPI.Controllers
                 _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.ToString() };
             }
-            return _response;
+            return Ok(_response);
         }
 
         [HttpPost]
-        public async Task<object> Post([FromBody] ProductDto productDto)
+        public async Task<IActionResult> Post([FromBody] ProductDto productDto)
         {
             try
             {
@@ -68,12 +69,11 @@ namespace ProductAPI.Controllers
                 _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.ToString() };
             }
-            return _response;
-
+            return Ok(_response);
         }
 
         [HttpPut]
-        public async Task<object> Put([FromBody] ProductDto productDto)
+        public async Task<IActionResult> Put([FromBody] ProductDto productDto)
         {
             try
             {
@@ -85,12 +85,11 @@ namespace ProductAPI.Controllers
                 _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.ToString() };
             }
-            return _response;
-
+            return Ok(_response);
         }
 
         [HttpDelete]
-        public async Task<object> Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             try
             {
@@ -102,9 +101,9 @@ namespace ProductAPI.Controllers
                 _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { ex.ToString() };
             }
-            return _response;
-
+            return Ok(_response);
         }
-       
+
+
     }
 }
