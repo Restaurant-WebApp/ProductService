@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using ProductAPI.Model;
 using ProductAPI.Repository;
 using System.Formats.Asn1;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProductAPI.Controllers
 {
@@ -57,6 +58,7 @@ namespace ProductAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles="admin")]
         public async Task<IActionResult> Post([FromBody] ProductDto productDto)
         {
             try
@@ -77,6 +79,7 @@ namespace ProductAPI.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles="admin")]
         public async Task<IActionResult> Put([FromBody] ProductDto productDto)
         {
             try
@@ -98,6 +101,7 @@ namespace ProductAPI.Controllers
 
 
         [HttpDelete]
+        [Authorize(Roles="admin")]
         public async Task<IActionResult> Delete(int id)
         {
             try
