@@ -18,19 +18,38 @@ namespace ProductAPI.Repository
 
         public async Task<ProductDto> CreateUpdateProduct(ProductDto productDto)
         {
-            Product product = _mapper.Map<ProductDto,Product>(productDto);
-            if (product.ProductId > 0)
+            Product product = _mapper.Map<ProductDto, Product>(productDto);
+
+            // Check if an existing product with the same ID exists in the database
+            Product existingProduct = await _context.Products.FindAsync(product.ProductId);
+
+            if (existingProduct != null)
             {
-                _context.Products.Update(product);
+                // Update the existing product with the new values
+                _mapper.Map(productDto, existingProduct);
             }
             else
             {
-                _context.Products.Add(product); 
+                // Add the new product to the database
+                _context.Products.Add(product);
             }
-            await _context.SaveChangesAsync();
-            return _mapper.Map<Product, ProductDto>(product);
 
+            try
+            {
+                // Save the changes to the database
+                await _context.SaveChangesAsync();
+                return _mapper.Map<Product, ProductDto>(product);
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                // A concurrency conflict occurred
+                // Handle this situation accordingly (e.g., retry the operation, inform the user, implement custom resolution)
+            }
+
+            throw new InvalidOperationException();
         }
+
+
 
         public async Task<bool> DeleteProduct(int productId)
         {

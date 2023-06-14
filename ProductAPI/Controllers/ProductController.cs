@@ -63,6 +63,10 @@ namespace ProductAPI.Controllers
             {
                 ProductDto newProduct = await _productRepo.CreateUpdateProduct(productDto);
                 _response.Result = newProduct;
+
+                // Retrieve all products after creating a new product
+                IEnumerable<ProductDto> productDtos = await _productRepo.GetProducts();
+                _response.Result = productDtos;
             }
             catch (Exception ex)
             {
@@ -79,6 +83,10 @@ namespace ProductAPI.Controllers
             {
                 ProductDto newProduct = await _productRepo.CreateUpdateProduct(productDto);
                 _response.Result = newProduct;
+
+                // Retrieve all products after updating a product
+                IEnumerable<ProductDto> productDtos = await _productRepo.GetProducts();
+                _response.Result = productDtos;
             }
             catch (Exception ex)
             {
@@ -87,6 +95,7 @@ namespace ProductAPI.Controllers
             }
             return Ok(_response);
         }
+
 
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
