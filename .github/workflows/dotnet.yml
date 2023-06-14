@@ -72,6 +72,6 @@ jobs:
           context: ./ProductAPI
           file: ./ProductAPI/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/restaurant-apigateway:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/restaurant-productapi:latest
 
       
