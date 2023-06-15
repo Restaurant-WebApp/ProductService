@@ -15,11 +15,9 @@ namespace ProductAPI.Repository
             _context = context;
             _mapper = mapper;
         }
-
         public async Task<ProductDto> CreateUpdateProduct(ProductDto productDto)
         {
             Product product = _mapper.Map<ProductDto, Product>(productDto);
-
             // Check if an existing product with the same ID exists in the database
             Product existingProduct = await _context.Products.FindAsync(product.ProductId);
 
@@ -33,7 +31,6 @@ namespace ProductAPI.Repository
                 // Add the new product to the database
                 _context.Products.Add(product);
             }
-
             try
             {
                 // Save the changes to the database
@@ -45,12 +42,8 @@ namespace ProductAPI.Repository
                 // A concurrency conflict occurred
                 // Handle this situation accordingly (e.g., retry the operation, inform the user, implement custom resolution)
             }
-
             throw new InvalidOperationException();
         }
-
-
-
         public async Task<bool> DeleteProduct(int productId)
         {
             try
