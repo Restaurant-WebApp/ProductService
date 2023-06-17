@@ -47,10 +47,10 @@ jobs:
            dotnet build ProductAPI
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
       - name: Run Unit Tests
-        run: dotnet test --configuration Release --no-build --verbosity normal ProductAPI.Tests
+        run: dotnet test --configuration Release --no-build --verbosity normal ProductAPI/ProductAPI.Tests
         
   build-dockerhub:  
-    name: Build and analyze
+    name: Build and push docker image to docker hub
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
