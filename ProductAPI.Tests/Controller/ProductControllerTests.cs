@@ -66,42 +66,37 @@ namespace ProductAPI.Tests
         }
 
         [Fact]
-        public async Task Post_ReturnsCreatedProduct()
+        public async Task Post_And_Put_ReturnsResponseWithUpdatedProducts()
         {
             // Arrange
             var productDto = new ProductDto { ProductId = 1, ProductName = "New Product" };
-            _mockProductRepo.Setup(repo => repo.CreateUpdateProduct(It.IsAny<ProductDto>()))
-                            .ReturnsAsync(productDto);
+            var updatedProductDto = new ProductDto { ProductId = 1, ProductName = "Updated Product" };
+
+            // Setup mock repository
+            _mockProductRepo.Setup(repo => repo.CreateUpdateProduct(productDto))
+                            .ReturnsAsync(updatedProductDto);
+
+            _mockProductRepo.Setup(repo => repo.GetProducts())
+                            .ReturnsAsync(new List<ProductDto> { updatedProductDto });
 
             // Act
-            var result = await _controller.Post(productDto);
+            var postResult = await _controller.Post(productDto);
+            var putResult = await _controller.Put(productDto);
 
             // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            var response = Assert.IsType<ResponseDto>(okResult.Value);
-            var createdProduct = Assert.IsType<ProductDto>(response.Result);
-            Assert.Equal(productDto.ProductId, createdProduct.ProductId);
-            Assert.Equal(productDto.ProductName, createdProduct.ProductName);
+            // Post
+            var postOkResult = Assert.IsType<OkObjectResult>(postResult);
+            var postResponse = Assert.IsType<ResponseDto>(postOkResult.Value);
+            var postProductList = Assert.IsType<List<ProductDto>>(postResponse.Result);
+            Assert.Contains(updatedProductDto, postProductList);
+
+            // Put
+            var putOkResult = Assert.IsType<OkObjectResult>(putResult);
+            var putResponse = Assert.IsType<ResponseDto>(putOkResult.Value);
+            var putProductList = Assert.IsType<List<ProductDto>>(putResponse.Result);
+            Assert.Contains(updatedProductDto, putProductList);
         }
 
-        [Fact]
-        public async Task Put_ReturnsUpdatedProduct()
-        {
-            // Arrange
-            var productDto = new ProductDto { ProductId = 1, ProductName = "Updated Product" };
-            _mockProductRepo.Setup(repo => repo.CreateUpdateProduct(It.IsAny<ProductDto>()))
-                            .ReturnsAsync(productDto);
-
-            // Act
-            var result = await _controller.Put(productDto);
-
-            // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            var response = Assert.IsType<ResponseDto>(okResult.Value);
-            var updatedProduct = Assert.IsType<ProductDto>(response.Result);
-            Assert.Equal(productDto.ProductId, updatedProduct.ProductId);
-            Assert.Equal(productDto.ProductName, updatedProduct.ProductName);
-        }
 
         [Fact]
         public async Task Delete_ReturnsSuccessStatus()
