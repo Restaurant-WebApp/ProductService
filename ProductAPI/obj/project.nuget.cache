@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b9AgRDlD++aA2x4fPWclPxH4gxM24tvUOztlN1K0d5Taw8gLFTt26aU+79y7P2osaKZ2uKzKStq4fq1729zlew==",
+  "dgSpecHash": "fVw6Ewlt2BDb2zV7jVNa7ICry4jhka4rthHBHINmYfzIUcjYXqemTgjuN2+b5hHlLZLSCocj5sMeDstPmTQXTQ==",
   "success": true,
-  "projectFilePath": "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI\\ProductAPI.csproj",
+  "projectFilePath": "C:\\Users\\Nares\\Desktop\\Res-Microservice\\Product\\ProductService\\ProductAPI\\ProductAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nares\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Nares\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

@@ -4228,11 +4228,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI\\ProductAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Nares\\Desktop\\Res-Microservice\\Product\\ProductService\\ProductAPI\\ProductAPI.csproj",
       "projectName": "ProductAPI",
-      "projectPath": "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI\\ProductAPI.csproj",
+      "projectPath": "C:\\Users\\Nares\\Desktop\\Res-Microservice\\Product\\ProductService\\ProductAPI\\ProductAPI.csproj",
       "packagesPath": "C:\\Users\\Nares\\.nuget\\packages\\",
-      "outputPath": "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI\\obj\\",
+      "outputPath": "C:\\Users\\Nares\\Desktop\\Res-Microservice\\Product\\ProductService\\ProductAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nares\\AppData\\Roaming\\NuGet\\NuGet.Config",

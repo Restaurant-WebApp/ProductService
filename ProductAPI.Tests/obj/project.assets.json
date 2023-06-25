@@ -8789,11 +8789,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI.Tests\\ProductAPI.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Nares\\Desktop\\Res-Microservice\\Product\\ProductService\\ProductAPI.Tests\\ProductAPI.Tests.csproj",
       "projectName": "ProductAPI.Tests",
-      "projectPath": "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI.Tests\\ProductAPI.Tests.csproj",
+      "projectPath": "C:\\Users\\Nares\\Desktop\\Res-Microservice\\Product\\ProductService\\ProductAPI.Tests\\ProductAPI.Tests.csproj",
       "packagesPath": "C:\\Users\\Nares\\.nuget\\packages\\",
-      "outputPath": "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI.Tests\\obj\\",
+      "outputPath": "C:\\Users\\Nares\\Desktop\\Res-Microservice\\Product\\ProductService\\ProductAPI.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nares\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8810,8 +8810,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI\\ProductAPI.csproj": {
-              "projectPath": "D:\\Fontys\\Restaurant-Microservices\\ProductService\\ProductAPI\\ProductAPI.csproj"
+            "C:\\Users\\Nares\\Desktop\\Res-Microservice\\Product\\ProductService\\ProductAPI\\ProductAPI.csproj": {
+              "projectPath": "C:\\Users\\Nares\\Desktop\\Res-Microservice\\Product\\ProductService\\ProductAPI\\ProductAPI.csproj"
             }
           }
         }
